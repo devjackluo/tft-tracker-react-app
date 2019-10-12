@@ -1,0 +1,15 @@
+
+.Tile {
+    width: calc(11.5vw);
+    height: calc(11.5vw);
+    margin: calc(1vw);
+    /* background-color: black; */
+    background-size: calc(10.5vw) calc(10.5vw);
+    border: none;
+
+}
+
+.tierRow{
+    margin-bottom: calc(8vw);
+}
+
