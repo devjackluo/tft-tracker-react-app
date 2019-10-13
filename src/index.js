@@ -5,60 +5,60 @@ import './index.css';
 
 
 var five_cost_dict = {
-    "anivia": [4, 4],
-    "kaisa": [8, 12],
-    "karthus": [10, 10],
-    "kayle": [7, 7],
-    "missFortune": [6, 9],
-    "pantheon": [5, 2],
-    "swain": [9, 1],
-    "yasuo": [2, 3]
+    "Anivia": [4, 4],
+    "Kaisa": [8, 12],
+    "Karthus": [10, 10],
+    "Kayle": [7, 7],
+    "MissFortune": [6, 9],
+    "Pantheon": [5, 2],
+    "Swain": [9, 1],
+    "Yasuo": [2, 3]
 }
 
 
 var four_cost_dict = {
-    "akali": [1, 8],
-    "aurelionSol": [10, 2],
-    "brand": [4, 1],
-    "chogath": [3, 12],
-    "draven": [2, 6],
-    "gnar": [9, 14],
-    "jinx": [6, 5],
-    "kindred": [8, 10],
-    "leona": [5, 7],
-    "sejuani": [7, 4]
+    "Akali": [1, 8],
+    "AurelionSol": [10, 2],
+    "Brand": [4, 1],
+    "Chogath": [3, 12],
+    "Draven": [2, 6],
+    "Gnar": [9, 14],
+    "Jinx": [6, 5],
+    "Kindred": [8, 10],
+    "Leona": [5, 7],
+    "Sejuani": [7, 4]
 }
 
 var three_cost_dict = {
-    "kennen": [4, 8],
-    "shyvana": [9, 2],
-    "katarina": [1, 6],
-    "poppy": [7, 14],
-    "rengar": [1, 13],
-    "aatrox": [2, 1],
-    "ashe": [8, 4],
-    "evelynn": [1, 1],
-    "morgana": [10, 1],
-    "vi": [3, 5],
-    "gangplank": [6, 9],
-    "veigar": [10, 14],
-    "volibear": [3, 4]
+    "Kennen": [4, 8],
+    "Shyvana": [9, 2],
+    "Katarina": [1, 6],
+    "Poppy": [7, 14],
+    "Rengar": [1, 13],
+    "Aatrox": [2, 1],
+    "Ashe": [8, 4],
+    "Evelynn": [1, 1],
+    "Morgana": [10, 1],
+    "Vi": [3, 5],
+    "Gangplank": [6, 9],
+    "Veigar": [10, 14],
+    "Volibear": [3, 4]
 }
 
 var two_cost_dict = {
-    "lucian": [6, 7],
-    "zed": [1, 8],
-    "ahri": [10, 13],
-    "blitzcrank": [3, 11],
-    "lissandra": [4, 4],
-    "lulu": [10, 14],
-    "pyke": [1, 9],
-    "varus": [8, 1],
-    "jayce": [9, 5],
-    "braum": [5, 4],
-    "reksai": [3, 12],
-    "shen": [2, 8],
-    "twistedFate": [10, 9]
+    "Lucian": [6, 7],
+    "Zed": [1, 8],
+    "Ahri": [10, 13],
+    "Blitzcrank": [3, 11],
+    "Lissandra": [4, 4],
+    "Lulu": [10, 14],
+    "Pyke": [1, 9],
+    "Varus": [8, 1],
+    "Jayce": [9, 5],
+    "Braum": [5, 4],
+    "Reksai": [3, 12],
+    "Shen": [2, 8],
+    "TwistedFate": [10, 9]
 }
 
 var one_cost_dict = {
