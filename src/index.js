@@ -5,76 +5,75 @@ import './index.css';
 
 
 var five_cost_dict = {
-    "Anivia": [4, 4],
-    "Kaisa": [8, 12],
-    "Karthus": [10, 10],
-    "Kayle": [7, 7],
-    "MissFortune": [6, 9],
-    "Pantheon": [5, 2],
-    "Swain": [9, 1],
-    "Yasuo": [2, 3]
+    "Anivia": [[4], [4]],
+    "Kaisa": [[1, 8], [12]],
+    "Karthus": [[10], [10]],
+    "Kayle": [[7], [7]],
+    "MissFortune": [[6], [9]],
+    "Pantheon": [[5], [2]],
+    "Swain": [[9], [1, 6]],
+    "Yasuo": [[2], [3]]
 }
 
-
 var four_cost_dict = {
-    "Akali": [1, 8],
-    "AurelionSol": [10, 2],
-    "Brand": [4, 1],
-    "Chogath": [3, 12],
-    "Draven": [2, 6],
-    "Gnar": [9, 14],
-    "Jinx": [6, 5],
-    "Kindred": [8, 10],
-    "Leona": [5, 7],
-    "Sejuani": [7, 4]
+    "Akali": [[1], [8]],
+    "AurelionSol": [[10], [2]],
+    "Brand": [[4], [1]],
+    "Chogath": [[3], [12]],
+    "Draven": [[2], [6]],
+    "Gnar": [[9], [13, 14]],
+    "Jinx": [[6], [5]],
+    "Kindred": [[8], [10]],
+    "Leona": [[5], [7]],
+    "Sejuani": [[7], [4]]
 }
 
 var three_cost_dict = {
-    "Kennen": [4, 8],
-    "Shyvana": [9, 2],
-    "Katarina": [1, 6],
-    "Poppy": [7, 14],
-    "Rengar": [1, 13],
-    "Aatrox": [2, 1],
-    "Ashe": [8, 4],
-    "Evelynn": [1, 1],
-    "Morgana": [10, 1],
-    "Vi": [3, 5],
-    "Gangplank": [6, 9],
-    "Veigar": [10, 14],
-    "Volibear": [3, 4]
+    "Kennen": [[4], [8, 14]],
+    "Shyvana": [[9], [2]],
+    "Katarina": [[1], [6]],
+    "Poppy": [[7], [14]],
+    "Rengar": [[1], [13]],
+    "Aatrox": [[2], [1]],
+    "Ashe": [[8], [4]],
+    "Evelynn": [[1], [1]],
+    "Morgana": [[10], [1]],
+    "Vi": [[3], [5]],
+    "Gangplank": [[2, 6], [9]],
+    "Veigar": [[10], [14]],
+    "Volibear": [[3], [4]]
 }
 
 var two_cost_dict = {
-    "Lucian": [6, 7],
-    "Zed": [1, 8],
-    "Ahri": [10, 13],
-    "Blitzcrank": [3, 11],
-    "Lissandra": [4, 4],
-    "Lulu": [10, 14],
-    "Pyke": [1, 9],
-    "Varus": [8, 1],
-    "Jayce": [9, 5],
-    "Braum": [5, 4],
-    "RekSai": [3, 12],
-    "Shen": [2, 8],
-    "TwistedFate": [10, 9]
+    "Lucian": [[6], [7]],
+    "Zed": [[1], [8]],
+    "Ahri": [[10], [13]],
+    "Blitzcrank": [[3], [11]],
+    "Lissandra": [[4], [4]],
+    "Lulu": [[10], [14]],
+    "Pyke": [[1], [9]],
+    "Varus": [[8], [1]],
+    "Jayce": [[9], [5]],
+    "Braum": [[5], [4]],
+    "RekSai": [[3], [12]],
+    "Shen": [[2], [8]],
+    "TwistedFate": [[10], [9]]
 }
 
 var one_cost_dict = {
-    "Darius": [7, 6],
-    "Kassadin": [10, 12],
-    "Khazix": [1, 12],
-    "Mordekaiser": [7, 10],
-    "Vayne": [8, 7],
-    "Fiora": [2, 7],
-    "Garen": [7, 7],
-    "Graves": [6, 9],
-    "Nidalee": [9, 13],
-    "Tristana": [6, 14],
-    "Warwick": [3, 13],
-    "Elise": [9, 1],
-    "Camille": [2, 5]
+    "Darius": [[7], [6]],
+    "Kassadin": [[10], [12]],
+    "Khazix": [[1], [12]],
+    "Mordekaiser": [[7], [10]],
+    "Vayne": [[8], [7]],
+    "Fiora": [[2], [7]],
+    "Garen": [[7], [7]],
+    "Graves": [[6], [9]],
+    "Nidalee": [[9], [13]],
+    "Tristana": [[6], [14]],
+    "Warwick": [[3], [13]],
+    "Elise": [[9], [1]],
+    "Camille": [[2], [5]]
 }
 
 
@@ -90,28 +89,34 @@ class Tile extends React.Component {
 
         var sectionStyle = null
 
-        if(this.props.championInfo[4]){
+        if (this.props.championInfo[4]) {
             sectionStyle = {
                 backgroundImage: "url(icons/" + this.props.championInfo[0] + ".png)",
                 border: "rgba(0,0,255,1) calc(1vw) solid",
                 opacity: ".4"
             }
-        }else if(this.props.championInfo[3] == 1){
+        } else if (this.props.championInfo[3] == 1) {
             sectionStyle = {
                 backgroundImage: "url(icons/" + this.props.championInfo[0] + ".png)",
-                border: "rgba(255,200,0,1) calc(1vw) solid",
+                border: "rgba(115,105,2,1) calc(1vw) solid",
             }
-        } else if(this.props.championInfo[3] == 2){
+        } else if (this.props.championInfo[3] == 2) {
             sectionStyle = {
                 backgroundImage: "url(icons/" + this.props.championInfo[0] + ".png)",
-                border: "rgba(255,100,0,1) calc(1vw) solid",
+                border: "rgba(165,85,0,1) calc(1vw) solid",
             }
-        }else if(this.props.championInfo[3] >= 3){
+        } else if (this.props.championInfo[3] == 3) {
+            sectionStyle = {
+                backgroundImage: "url(icons/" + this.props.championInfo[0] + ".png)",
+                border: "rgba(195,45,0,1) calc(1vw) solid",
+            }
+        } else if (this.props.championInfo[3] >= 4) {
             sectionStyle = {
                 backgroundImage: "url(icons/" + this.props.championInfo[0] + ".png)",
                 border: "rgba(255,0,0,1) calc(1vw) solid",
             }
-        }else{
+        } 
+        else {
             this.props.championInfo[3] = 0
             sectionStyle = {
                 backgroundImage: "url(icons/" + this.props.championInfo[0] + ".png)",
@@ -204,23 +209,45 @@ class Board extends React.Component {
         for (var champion in clonedChampionArray) {
             var currentChampionInfo = this.state.championsArrayGlobal[champion]
             if (clickedChampInfo[0] != currentChampionInfo[0]) {
-                if (currentChampionInfo[2][0] == clickedChampInfo[2][0] && currentChampionInfo[2][1] == clickedChampInfo[2][1]) {
 
-                    //console.log(clonedChampionArray[champion][4])
-                    if (clickedChampInfo[4]) {
-                        currentChampionInfo[3] += 2
-                    } else {
-                        currentChampionInfo[3] -= 2
+                //console.log(clickedChampInfo[2][0][0])
+
+                for (var clickedChampionClass in clickedChampInfo[2][0]){
+                    
+                    for(var currentChampionClass in currentChampionInfo[2][0]){
+
+                        if (clickedChampInfo[2][0][clickedChampionClass] == currentChampionInfo[2][0][currentChampionClass]){
+                            
+                            if(clickedChampInfo[4]){
+                                currentChampionInfo[3] += 1
+                            }else{
+                                currentChampionInfo[3] -= 1
+                            }
+
+                        }
                     }
 
                 }
-                else if (currentChampionInfo[2][0] == clickedChampInfo[2][0] || currentChampionInfo[2][1] == clickedChampInfo[2][1]) {
-                    if (clickedChampInfo[4]) {
-                        currentChampionInfo[3] += 1
-                    } else {
-                        currentChampionInfo[3] -= 1
+
+
+                for (var clickedChampionOrigin in clickedChampInfo[2][1]){
+                    
+                    for(var currentChampionOrigin in currentChampionInfo[2][1]){
+
+                        if (clickedChampInfo[2][1][clickedChampionOrigin] == currentChampionInfo[2][1][currentChampionOrigin]){
+                            
+                            if(clickedChampInfo[4]){
+                                currentChampionInfo[3] += 1
+                            }else{
+                                currentChampionInfo[3] -= 1
+                            }
+                            
+                        }
+
                     }
+
                 }
+
             }
         }
 
@@ -232,7 +259,7 @@ class Board extends React.Component {
 
     }
 
-    clearBoard(){
+    clearBoard() {
         this.setState({
             championsArrayGlobal: this.initializeChampionArray()
         })
