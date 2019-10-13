@@ -2,11 +2,14 @@
 
 
 #root {
-    background-color: rgba(15, 15, 15, 1);
+    background-color: rgba(35, 35, 35, 1);
+    padding-left: calc(2vw);
+    padding-top: calc(5vw);
 }
 
 body{
     margin: 0;
+    background-color: rgba(35, 35, 35, 1);
 }
 
 .Tile {
@@ -28,8 +31,10 @@ body{
 }
 
 .clearBtn > button{
-    margin-left: calc(3vw);
-    margin-bottom: calc(5vw);
+    
+    margin-left: calc(35vw);
+    margin-bottom: calc(2vw);
+    margin-top: calc(7vw);
     width: calc(30vw);
     height: calc(10vw);
     background-color: green;
@@ -38,4 +43,6 @@ body{
     border: 0;
     padding: 0;
 }
+
+button:focus {outline:0;}
 
