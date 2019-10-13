@@ -56,7 +56,7 @@ var two_cost_dict = {
     "Varus": [8, 1],
     "Jayce": [9, 5],
     "Braum": [5, 4],
-    "Reksai": [3, 12],
+    "RekSai": [3, 12],
     "Shen": [2, 8],
     "TwistedFate": [10, 9]
 }
@@ -232,6 +232,12 @@ class Board extends React.Component {
 
     }
 
+    clearBoard(){
+        this.setState({
+            championsArrayGlobal: this.initializeChampionArray()
+        })
+    }
+
     render() {
 
         //console.log("render!")
@@ -309,6 +315,10 @@ class Board extends React.Component {
                 </div>
                 <div className="tierRow">
                     {displayIconsFiveCost}
+                </div>
+
+                <div className="tierRow clearBtn">
+                    <button onClick={() => this.clearBoard()}>CLEAR</button>
                 </div>
             </div>
         );

@@ -1,15 +1,35 @@
 
+#root {
+    background-color: black;
+}
+
 .Tile {
-    width: calc(11.5vw);
-    height: calc(11.5vw);
+    width: calc(10vw);
+    height: calc(10vw);
     margin: calc(1vw);
     /* background-color: black; */
-    background-size: calc(10.5vw) calc(10.5vw);
+    background-size: calc(9vw) calc(9vw);
     border: none;
 
 }
 
 .tierRow{
-    margin-bottom: calc(8vw);
+    margin-bottom: calc(6vw);
+}
+
+.clearBtn{
+    margin-bottom: 0;
+}
+
+.clearBtn > button{
+    margin-left: calc(3vw);
+    margin-bottom: calc(5vw);
+    width: calc(30vw);
+    height: calc(10vw);
+    background-color: green;
+    color: black;
+    font-size: calc(4vw);
+    border: 0;
+    padding: 0;
 }
 
