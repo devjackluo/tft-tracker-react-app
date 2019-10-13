@@ -76,6 +76,67 @@ var one_cost_dict = {
     "Camille": [[2], [5]]
 }
 
+var tft_class = {
+    1: "Assassin",
+    2: "Blademaster",
+    3: "Brawler",
+    4: "Elementalist",
+    5: "Guardian",
+    6: "Gunslinger",
+    7: "Knight",
+    8: "Ranger",
+    9: "Shapeshifter",
+    10: "Sorcerer"
+}
+
+var tft_origin = {
+    1: "Demon",
+    2: "Dragon",
+    3: "Exile",
+    4: "Glacial",
+    5: "Hextech",
+    6: "Imperial",
+    7: "Noble",
+    8: "Ninja",
+    9: "Pirate",
+    10: "Phantom",
+    11: "Robot",
+    12: "Void",
+    13: "Wild",
+    14: "Yordle"
+}
+
+var tft_class_rules = {
+    1: [3,6],
+    2: [3,6],
+    3: [2,4,6],
+    4: [3],
+    5: [2],
+    6: [2,4,6],
+    7: [2,4,6],
+    8: [2,4],
+    9: [3,6],
+    10: [3,6]
+}
+
+var tft_origin_rules = {
+    1: [2,4,6],
+    2: [2],
+    3: [1],
+    4: [2,4,6],
+    5: [2,4],
+    6: [2,4],
+    7: [3,6],
+    8: [1,4],
+    9: [3],
+    10: [2],
+    11: [1],
+    12: [2,4],
+    13: [2,4],
+    14: [3,6]
+}
+
+
 
 class Tile extends React.Component {
 
@@ -182,20 +243,9 @@ class Board extends React.Component {
 
     handleChampionCalculations(clickedChampInfo) {
 
-        //console.log(clickedChampInfo)
+
         var clonedChampionArray = this.state.championsArrayGlobal.slice()
 
-        // for (var champion in clonedChampionArray) {
-        //     var currentChampionInfo = clonedChampionArray[champion]
-        //     if (clickedChampInfo[0] == currentChampionInfo[0]) {
-
-        //         if (clonedChampionArray[champion][4]) {
-        //             clonedChampionArray[champion][4] = false
-        //         } else {
-        //             clonedChampionArray[champion][4] = true
-        //         }
-        //     }
-        // }
 
         if (clickedChampInfo[4]) {
             clickedChampInfo[4] = false
@@ -203,14 +253,16 @@ class Board extends React.Component {
             clickedChampInfo[4] = true
         }
 
-        //console.log(clickedChampInfo)
 
-
+        var classMatchCompletionArray = []
+        var originMatchCompletionArray = []
+        
         for (var champion in clonedChampionArray) {
+
             var currentChampionInfo = this.state.championsArrayGlobal[champion]
+
             if (clickedChampInfo[0] != currentChampionInfo[0]) {
 
-                //console.log(clickedChampInfo[2][0][0])
 
                 for (var clickedChampionClass in clickedChampInfo[2][0]){
                     
@@ -218,6 +270,11 @@ class Board extends React.Component {
 
                         if (clickedChampInfo[2][0][clickedChampionClass] == currentChampionInfo[2][0][currentChampionClass]){
                             
+
+                            if(currentChampionInfo[4]){
+                                classMatchCompletionArray.push(clickedChampInfo[2][0][clickedChampionClass])
+                            }
+
                             if(clickedChampInfo[4]){
                                 currentChampionInfo[3] += 1
                             }else{
@@ -236,6 +293,11 @@ class Board extends React.Component {
 
                         if (clickedChampInfo[2][1][clickedChampionOrigin] == currentChampionInfo[2][1][currentChampionOrigin]){
                             
+
+                            if(currentChampionInfo[4]){
+                                originMatchCompletionArray.push(clickedChampInfo[2][1][clickedChampionOrigin])
+                            }
+
                             if(clickedChampInfo[4]){
                                 currentChampionInfo[3] += 1
                             }else{
@@ -251,7 +313,8 @@ class Board extends React.Component {
             }
         }
 
-
+        console.log(classMatchCompletionArray)
+        console.log(originMatchCompletionArray)
 
         this.setState({
             championsArrayGlobal: clonedChampionArray
