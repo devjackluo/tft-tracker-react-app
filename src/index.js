@@ -177,7 +177,7 @@ class Board extends React.Component {
 
     handleChampionCalculations(clickedChampInfo) {
 
-        console.log(clickedChampInfo)
+        //console.log(clickedChampInfo)
         var clonedChampionArray = this.state.championsArrayGlobal.slice()
 
         // for (var champion in clonedChampionArray) {
@@ -198,7 +198,7 @@ class Board extends React.Component {
             clickedChampInfo[4] = true
         }
 
-        console.log(clickedChampInfo)
+        //console.log(clickedChampInfo)
 
 
         for (var champion in clonedChampionArray) {
@@ -234,7 +234,7 @@ class Board extends React.Component {
 
     render() {
 
-        console.log("render!")
+        //console.log("render!")
 
         var displayIconsOneCost = []
         var displayIconsTwoCost = []
