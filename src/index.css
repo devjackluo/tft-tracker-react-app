@@ -1,6 +1,12 @@
 
+
+
 #root {
-    background-color: black;
+    background-color: rgba(15, 15, 15, 1);
+}
+
+body{
+    margin: 0;
 }
 
 .Tile {
