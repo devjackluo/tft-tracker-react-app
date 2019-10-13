@@ -93,23 +93,23 @@ class Tile extends React.Component {
         if(this.props.championInfo[4]){
             sectionStyle = {
                 backgroundImage: "url(icons/" + this.props.championInfo[0] + ".png)",
-                border: "blue calc(1vw) solid",
+                border: "rgba(0,0,255,1) calc(1vw) solid",
                 opacity: ".4"
             }
         }else if(this.props.championInfo[3] == 1){
             sectionStyle = {
                 backgroundImage: "url(icons/" + this.props.championInfo[0] + ".png)",
-                border: "yellow calc(1vw) solid"
+                border: "rgba(255,200,0,1) calc(1vw) solid",
             }
         } else if(this.props.championInfo[3] == 2){
             sectionStyle = {
                 backgroundImage: "url(icons/" + this.props.championInfo[0] + ".png)",
-                border: "orange calc(1vw) solid"
+                border: "rgba(255,100,0,1) calc(1vw) solid",
             }
         }else if(this.props.championInfo[3] >= 3){
             sectionStyle = {
                 backgroundImage: "url(icons/" + this.props.championInfo[0] + ".png)",
-                border: "red calc(1vw) solid"
+                border: "rgba(255,0,0,1) calc(1vw) solid",
             }
         }else{
             this.props.championInfo[3] = 0
