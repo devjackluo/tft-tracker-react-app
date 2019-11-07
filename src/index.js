@@ -5,83 +5,141 @@ import './index.css';
 
 
 var five_cost_dict = {
-    "Anivia": [[4], [4]],
-    "Kaisa": [[1, 8], [12]],
-    "Karthus": [[10], [10]],
-    "Kayle": [[7], [7]],
-    "MissFortune": [[6], [9]],
-    "Pantheon": [[5], [2]],
-    "Swain": [[9], [1, 6]],
-    "Yasuo": [[2], [3]]
+    "Yi": [[11], [8,5]],
+    "Nami": [[9], [8]],
+    "Singed": [[10], [1]],
+    "Taric": [[2], [12]],
+    "Zed": [[4], [11,2]]
 }
 
 var four_cost_dict = {
-    "Akali": [[1], [8]],
-    "AurelionSol": [[10], [2]],
-    "Brand": [[4], [1]],
-    "Chogath": [[3], [12]],
-    "Draven": [[2], [6]],
-    "Gnar": [[9], [13, 14]],
-    "Jinx": [[6], [5]],
-    "Kindred": [[8], [10]],
-    "Leona": [[5], [7]],
-    "Sejuani": [[7], [4]]
+    "Annie": [[6], [11]],
+    "Ashe": [[2], [10]],
+    "Brand": [[6], [7]],
+    "Janna": [[1], [8]],
+    "Khazix": [[3], [2]],
+    "Malphite": [[8], [12]],
+    "Olaf": [[5], [4]],
+    "Twitch": [[10], [10]],
+    "Yorick": [[7], [11]]
 }
 
 var three_cost_dict = {
-    "Kennen": [[4], [8, 14]],
-    "Shyvana": [[9], [2]],
-    "Katarina": [[1], [6]],
-    "Poppy": [[7], [14]],
-    "Rengar": [[1], [13]],
-    "Aatrox": [[2], [1]],
-    "Ashe": [[8], [4]],
-    "Evelynn": [[1], [1]],
-    "Morgana": [[10], [1]],
-    "Vi": [[3], [5]],
-    "Gangplank": [[2, 6], [9]],
-    "Veigar": [[10], [14]],
-    "Volibear": [[3], [4]]
+    "Aatrox": [[7], [5]],
+    "Azir": [[3], [11]],
+    "Mundo": [[10], [4]],
+    "Ezreal": [[5], [10]],
+    "Kindred": [[11,6], [10]],
+    "Nautilus": [[9], [12]],
+    "Nocturne": [[12], [2]],
+    "Qiyana": [[13], [2]],
+    "Sion": [[11], [4]],
+    "Sivir": [[3], [5]],
+    "Soraka": [[7], [8]],
+    "Veigar": [[11], [7]]
 }
 
 var two_cost_dict = {
-    "Lucian": [[6], [7]],
-    "Zed": [[1], [8]],
-    "Ahri": [[10], [13]],
-    "Blitzcrank": [[3], [11]],
-    "Lissandra": [[4], [4]],
-    "Lulu": [[10], [14]],
-    "Pyke": [[1], [9]],
-    "Varus": [[8], [1]],
-    "Jayce": [[9], [5]],
-    "Braum": [[5], [4]],
-    "RekSai": [[3], [12]],
-    "Shen": [[2], [8]],
-    "TwistedFate": [[10], [9]]
+    "Braum": [[5], [12]],
+    "Diana": [[6], [2]],
+    "Jax": [[7], [4]],
+    "Leblanc": [[14], [7,2]],
+    "Malzahar": [[11], [11]],
+    "Neeko": [[14], [6]],
+    "Reksai": [[12], [9]],
+    "Skarner": [[2], [9]],
+    "Syndra": [[9], [7]],
+    "Thresh": [[9], [12]],
+    "Varus": [[6], [10]],
+    "Volibear": [[4,5], [4]],
+    "Yasuo": [[1], [5]]
 }
 
 var one_cost_dict = {
-    "Darius": [[7], [6]],
-    "Kassadin": [[10], [12]],
-    "Khazix": [[1], [12]],
-    "Mordekaiser": [[7], [10]],
-    "Vayne": [[8], [7]],
-    "Fiora": [[2], [7]],
-    "Garen": [[7], [7]],
-    "Graves": [[6], [9]],
-    "Nidalee": [[9], [13]],
-    "Tristana": [[6], [14]],
-    "Warwick": [[3], [13]],
-    "Elise": [[9], [1]],
-    "Camille": [[2], [5]]
+    "Ivern": [[14], [6]],
+    "Kogmaw": [[10], [9]],
+    "Maokai": [[14], [6]],
+    "Nasus": [[7], [12]],
+    "Ornn": [[4], [12]],
+    "Renekton": [[3], [4]],
+    "Taliyah": [[8], [7]],
+    "Vayne": [[7], [10]],
+    "Vladimir": [[9], [7]],
+    "Warwick": [[5], [9]],
+    "Zyra": [[6], [11]]
 }
+
+
+var tft_class = {
+    1: "Alchemist",
+    2: "Assassin",
+    3: "Avatar",
+    4: "Berserker",
+    5: "Blademaster",
+    6: "Druid",
+    7: "Mage",
+    8: "Mystic",
+    9: "Predator",
+    10: "Ranger",
+    11: "Summoner",
+    12: "Warden"
+}
+
+var tft_origin = {
+    1: "Cloud",
+    2: "Crystal",
+    3: "Desert",
+    4: "Electric",
+    5: "Glacial",
+    6: "Inferno",
+    7: "Light",
+    8: "Mountain",
+    9: "Ocean",
+    10: "Poison",
+    11: "Shadow",
+    12: "Steel",
+    13: "Variable",
+    14: "Woodland"
+}
+
+var tft_class_rules = {
+    1: [1],
+    2: [3,6],
+    3: [1],
+    4: [3,6],
+    5: [2,4,6],
+    6: [2],
+    7: [3,6],
+    8: [2,4],
+    9: [3],
+    10: [2,4,6],
+    11: [3,6],
+    12: [2,4,6]
+}
+
+var tft_origin_rules = {
+    1: [2,3,4],
+    2: [2,4],
+    3: [2,4],
+    4: [2,3,4],
+    5: [2,4,6],
+    6: [3,6,9],
+    7: [3,6,9],
+    8: [2],
+    9: [2,4,6],
+    10: [3],
+    11: [2,4],
+    12: [2,3,4],
+    13: [1],
+    14: [3]
+}
+
 
 
 class Tile extends React.Component {
 
     constructor(props) {
         super(props);
-        //console.log(this.props)
     }
 
 
@@ -182,20 +240,9 @@ class Board extends React.Component {
 
     handleChampionCalculations(clickedChampInfo) {
 
-        //console.log(clickedChampInfo)
+
         var clonedChampionArray = this.state.championsArrayGlobal.slice()
 
-        // for (var champion in clonedChampionArray) {
-        //     var currentChampionInfo = clonedChampionArray[champion]
-        //     if (clickedChampInfo[0] == currentChampionInfo[0]) {
-
-        //         if (clonedChampionArray[champion][4]) {
-        //             clonedChampionArray[champion][4] = false
-        //         } else {
-        //             clonedChampionArray[champion][4] = true
-        //         }
-        //     }
-        // }
 
         if (clickedChampInfo[4]) {
             clickedChampInfo[4] = false
@@ -203,14 +250,16 @@ class Board extends React.Component {
             clickedChampInfo[4] = true
         }
 
-        //console.log(clickedChampInfo)
 
-
+        var classMatchCompletionArray = []
+        var originMatchCompletionArray = []
+        
         for (var champion in clonedChampionArray) {
+
             var currentChampionInfo = this.state.championsArrayGlobal[champion]
+
             if (clickedChampInfo[0] != currentChampionInfo[0]) {
 
-                //console.log(clickedChampInfo[2][0][0])
 
                 for (var clickedChampionClass in clickedChampInfo[2][0]){
                     
@@ -218,6 +267,11 @@ class Board extends React.Component {
 
                         if (clickedChampInfo[2][0][clickedChampionClass] == currentChampionInfo[2][0][currentChampionClass]){
                             
+
+                            if(currentChampionInfo[4]){
+                                classMatchCompletionArray.push(clickedChampInfo[2][0][clickedChampionClass])
+                            }
+
                             if(clickedChampInfo[4]){
                                 currentChampionInfo[3] += 1
                             }else{
@@ -236,6 +290,11 @@ class Board extends React.Component {
 
                         if (clickedChampInfo[2][1][clickedChampionOrigin] == currentChampionInfo[2][1][currentChampionOrigin]){
                             
+
+                            if(currentChampionInfo[4]){
+                                originMatchCompletionArray.push(clickedChampInfo[2][1][clickedChampionOrigin])
+                            }
+
                             if(clickedChampInfo[4]){
                                 currentChampionInfo[3] += 1
                             }else{
@@ -252,7 +311,6 @@ class Board extends React.Component {
         }
 
 
-
         this.setState({
             championsArrayGlobal: clonedChampionArray
         })
@@ -267,7 +325,6 @@ class Board extends React.Component {
 
     render() {
 
-        //console.log("render!")
 
         var displayIconsOneCost = []
         var displayIconsTwoCost = []
