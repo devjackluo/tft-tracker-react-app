@@ -5,121 +5,124 @@ import './index.css';
 
 
 var five_cost_dict = {
-    "Yi": [[11], [8,5]],
-    "Nami": [[9], [8]],
-    "Singed": [[10], [1]],
-    "Taric": [[2], [12]],
-    "Zed": [[4], [11,2]]
+    "Sol": [[8], [13]],
+    "Ekko": [[5], [5]],
+    "Gangplank": [[9], [4,7]],
+    "Janna": [[10], [9]],
+    "Lulu": [[3], [8]],
+    "Thresh": [[4], [6]],
+    "Urgot": [[2], [10]],
+    "Xerath": [[6], [12]]
 }
 
 var four_cost_dict = {
-    "Annie": [[6], [11]],
-    "Ashe": [[2], [10]],
-    "Brand": [[6], [7]],
-    "Janna": [[1], [8]],
-    "Khazix": [[3], [2]],
-    "Malphite": [[8], [12]],
-    "Olaf": [[5], [4]],
-    "Twitch": [[10], [10]],
-    "Yorick": [[7], [11]]
+    "Fizz": [[7], [5]],
+    "Gnar": [[1], [3]],
+    "Irelia": [[5], [6]],
+    "Jhin": [[6], [11]],
+    "Jinx": [[8], [2]],
+    "Riven": [[4], [1]],
+    "Soraka": [[10], [8]],
+    "Teemo": [[1], [11]],
+    "Viktor": [[2], [12]],
+    "Wukong": [[4], [14]]
 }
 
 var three_cost_dict = {
-    "Aatrox": [[7], [5]],
-    "Azir": [[3], [11]],
-    "Mundo": [[10], [4]],
-    "Ezreal": [[5], [10]],
-    "Kindred": [[11,6], [10]],
-    "Nautilus": [[9], [12]],
-    "Nocturne": [[12], [2]],
-    "Qiyana": [[13], [2]],
-    "Sion": [[11], [4]],
-    "Sivir": [[3], [5]],
-    "Soraka": [[7], [8]],
-    "Veigar": [[11], [7]]
+    "Ashe": [[3], [11]],
+    "Bard": [[1], [8]],
+    "Cass": [[2], [8]],
+    "Ezreal": [[4], [2]],
+    "Jayce": [[9], [14]],
+    "Karma": [[6], [8]],
+    "MasterYi": [[8], [1]],
+    "Neeko": [[10], [10]],
+    "Rumble": [[7], [4]],
+    "Shaco": [[6], [5]],
+    "Syndra": [[10], [12]],
+    "Vayne": [[5], [11]],
+    "Vi": [[5], [3]]
 }
 
 var two_cost_dict = {
-    "Braum": [[5], [12]],
-    "Diana": [[6], [2]],
-    "Jax": [[7], [4]],
-    "Leblanc": [[14], [7,2]],
-    "Malzahar": [[11], [11]],
-    "Neeko": [[14], [6]],
-    "Reksai": [[12], [9]],
-    "Skarner": [[2], [9]],
-    "Syndra": [[9], [7]],
-    "Thresh": [[9], [12]],
-    "Varus": [[6], [10]],
-    "Volibear": [[4,5], [4]],
-    "Yasuo": [[1], [5]]
+    "Ahri": [[10], [12]],
+    "Annie": [[7], [12]],
+    "Blitzcrank": [[4], [3]],
+    "Darius": [[9], [6]],
+    "KogMaw": [[2], [2]],
+    "Lucian": [[5], [2]],
+    "MordeKaiser": [[6], [14]],
+    "Nautilus": [[1], [14]],
+    "Rakan": [[3], [10]],
+    "Shen": [[4], [1]],
+    "XinZhao": [[3], [10]],
+    "Yasuo": [[8], [1]],
+    "Zed": [[8], [5]]
 }
 
 var one_cost_dict = {
-    "Ivern": [[14], [6]],
-    "Kogmaw": [[10], [9]],
-    "Maokai": [[14], [6]],
-    "Nasus": [[7], [12]],
-    "Ornn": [[4], [12]],
-    "Renekton": [[3], [4]],
-    "Taliyah": [[8], [7]],
-    "Vayne": [[7], [10]],
-    "Vladimir": [[9], [7]],
-    "Warwick": [[5], [9]],
-    "Zyra": [[6], [11]]
+    "Caitlyn": [[4], [11]],
+    "Fiora": [[5], [1]],
+    "Graves": [[9], [2]],
+    "Illaoi": [[2], [3]],
+    "Jarvan": [[6], [10]],
+    "Leona": [[5], [14]],
+    "Malphite": [[8], [3]],
+    "Nocturne": [[2], [5]],
+    "Poppy": [[10], [14]],
+    "TF": [[4], [12]],
+    "Xayah": [[3], [1]],
+    "Ziggs": [[8], [4]],
+    "Zoe": [[10], [12]]
 }
 
-
-var tft_class = {
-    1: "Alchemist",
-    2: "Assassin",
-    3: "Avatar",
-    4: "Berserker",
-    5: "Blademaster",
-    6: "Druid",
-    7: "Mage",
-    8: "Mystic",
-    9: "Predator",
-    10: "Ranger",
-    11: "Summoner",
-    12: "Warden"
-}
 
 var tft_origin = {
-    1: "Cloud",
-    2: "Crystal",
-    3: "Desert",
-    4: "Electric",
-    5: "Glacial",
-    6: "Inferno",
-    7: "Light",
-    8: "Mountain",
-    9: "Ocean",
-    10: "Poison",
-    11: "Shadow",
-    12: "Steel",
-    13: "Variable",
-    14: "Woodland"
+    1: "Astro",
+    2: "Battlecast",
+    3: "Celestial",
+    4: "Chrono",
+    5: "Cybernetic",
+    6: "Dark Star",
+    7: "Mech Pilot",
+    8: "Rebel",
+    9: "Space Pirate",
+    10: "Star Guardian"
+}
+
+var tft_class = {
+    1: "Blademaster",
+    2: "Blaster",
+    3: "Brawler",
+    4: "Demolitionist",
+    5: "Infiltrator",
+    6: "Mana-Reaver",
+    7: "Mercenary",
+    8: "Mystic",
+    9: "Paragon",
+    10: "Protector",
+    11: "Sniper",
+    12: "Sorcerer",
+    13: "Starship",
+    14: "Vanguard"
 }
 
 var tft_class_rules = {
-    1: [1],
-    2: [3,6],
-    3: [1],
-    4: [3,6],
-    5: [2,4,6],
-    6: [2],
-    7: [3,6],
-    8: [2,4],
-    9: [3],
-    10: [2,4,6],
-    11: [3,6],
-    12: [2,4,6]
+    1: [3,6],
+    2: [2,4,6,8],
+    3: [2,4],
+    4: [2,4,6],
+    5: [3,6],
+    6: [2,4,6,8],
+    7: [3],
+    8: [3,6,9],
+    9: [2,4],
+    10: [3,6]
 }
 
 var tft_origin_rules = {
-    1: [2,3,4],
-    2: [2,4],
+    1: [3],
+    2: [2,4,6,8],
     3: [2,4],
     4: [2,3,4],
     5: [2,4,6],
@@ -150,35 +153,35 @@ class Tile extends React.Component {
         if (this.props.championInfo[4]) {
             sectionStyle = {
                 backgroundImage: "url(icons/" + this.props.championInfo[0] + ".png)",
-                border: "rgba(0,0,255,1) calc(1vw) solid",
-                opacity: ".4"
+                border: "rgba(120,120,120,1) calc(0.5vmin) solid",
+                opacity: ".2"
             }
         } else if (this.props.championInfo[3] == 1) {
             sectionStyle = {
                 backgroundImage: "url(icons/" + this.props.championInfo[0] + ".png)",
-                border: "rgba(115,105,2,1) calc(1vw) solid",
+                border: "rgba(155,155,2,1) calc(0.5vmin) solid",
             }
         } else if (this.props.championInfo[3] == 2) {
             sectionStyle = {
                 backgroundImage: "url(icons/" + this.props.championInfo[0] + ".png)",
-                border: "rgba(165,85,0,1) calc(1vw) solid",
+                border: "rgba(175,95,0,1) calc(0.5vmin) solid",
             }
         } else if (this.props.championInfo[3] == 3) {
             sectionStyle = {
                 backgroundImage: "url(icons/" + this.props.championInfo[0] + ".png)",
-                border: "rgba(195,45,0,1) calc(1vw) solid",
+                border: "rgba(185,50,0,1) calc(0.5vmin) solid",
             }
         } else if (this.props.championInfo[3] >= 4) {
             sectionStyle = {
                 backgroundImage: "url(icons/" + this.props.championInfo[0] + ".png)",
-                border: "rgba(255,0,0,1) calc(1vw) solid",
+                border: "rgba(255,0,0,1) calc(0.5vmin) solid",
             }
         } 
         else {
             this.props.championInfo[3] = 0
             sectionStyle = {
                 backgroundImage: "url(icons/" + this.props.championInfo[0] + ".png)",
-                border: "black calc(1vw) solid"
+                border: "black calc(0.5vmin) solid"
             }
         }
 

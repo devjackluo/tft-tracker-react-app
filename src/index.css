@@ -1,48 +1,128 @@
 
+@media (min-width: 0px) { 
 
-
-#root {
-    background-color: rgba(35, 35, 35, 1);
-    padding-left: calc(2vw);
-    padding-top: calc(5vw);
-}
-
-body{
-    margin: 0;
-    background-color: rgba(35, 35, 35, 1);
-}
-
-.Tile {
-    width: calc(10vw);
-    height: calc(10vw);
-    margin: calc(1vw);
-    /* background-color: black; */
-    background-size: calc(9vw) calc(9vw);
-    border: none;
-
-}
-
-.tierRow{
-    margin-bottom: calc(6vw);
-}
-
-.clearBtn{
-    margin-bottom: 0;
-}
-
-.clearBtn > button{
+    #root {
+        background-color: rgba(35, 35, 35, 1);
+        padding-left: calc(5vmin);
+        padding-top: calc(10vmin);
+    }
     
-    margin-left: calc(35vw);
-    margin-bottom: calc(2vw);
-    margin-top: calc(7vw);
-    width: calc(30vw);
-    height: calc(10vw);
-    background-color: green;
-    color: black;
-    font-size: calc(4vw);
-    border: 0;
-    padding: 0;
+    body{
+        margin: 0;
+        background-color: rgba(35, 35, 35, 1);
+    }
+    
+    .Tile {
+        width: calc(10vmin);
+        height: calc(10vmin);
+        margin: calc(.5vmin);
+        /* background-color: black; */
+        background-size: calc(9vmin) calc(9vmin);
+        border: none;
+    
+    }
+    
+    .tierRow{
+        margin-bottom: calc(5vmin);
+    }
+    
+    .clearBtn{
+        margin-bottom: 0;
+    }
+    
+    .clearBtn > button{
+        
+        margin-left: calc(0.8vmin);
+        margin-bottom: calc(2vmin);
+        margin-top: calc(2vmin);
+        width: calc(35vmin);
+        height: calc(10vmin);
+        background-color: green;
+        color: black;
+        font-size: calc(4vmin);
+        border: 0;
+        padding: 0;
+        
+    }
+    
+    button:focus {outline:0;}
+    
+
+
 }
 
-button:focus {outline:0;}
+
+@media (min-width: 768px) { 
+
+    #root {
+
+        padding-left: calc(4vmin);
+        padding-top: calc(4vmin);
+    }
+    
+
+    .Tile {
+        width: calc(8vmin);
+        height: calc(8vmin);
+        margin: calc(.5vmin);
+        background-size: calc(7vmin) calc(7vmin);
+    }
+    
+    .tierRow{
+        margin-bottom: calc(2vmin);
+    }
+    
+    .clearBtn > button{
+        
+        margin-left: calc(0.8vmin);
+        margin-bottom: calc(2vmin);
+        margin-top: calc(2vmin);
+        width: calc(35vmin);
+        height: calc(10vmin);
+        font-size: calc(4vmin);
+
+    }
+
+}
+
+@media (min-width: 992px) { 
+
+
+
+}
+
+@media (min-width: 1200px) {
+
+    #root {
+
+        padding-left: calc(4vmin);
+        padding-top: calc(4vmin);
+    }
+    
+
+    .Tile {
+        width: calc(8vmin);
+        height: calc(8vmin);
+        margin: calc(.5vmin);
+        background-size: calc(7vmin) calc(7vmin);
+    }
+    
+    .tierRow{
+        margin-bottom: calc(2vmin);
+    }
+    
+    .clearBtn > button{
+        
+        margin-left: calc(0.8vmin);
+        margin-bottom: calc(2vmin);
+        margin-top: calc(3vmin);
+        width: calc(30vmin);
+        height: calc(7vmin);
+        font-size: calc(4vmin);
+
+    }
+
+}
+
+
 
