@@ -51,7 +51,7 @@ var two_cost_dict = {
     "Darius": [[9], [6]],
     "KogMaw": [[2], [2]],
     "Lucian": [[5], [2]],
-    "MordeKaiser": [[6], [14]],
+    "Mordekaiser": [[6], [14]],
     "Nautilus": [[1], [14]],
     "Rakan": [[3], [10]],
     "Shen": [[4], [1]],
