@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/tft-tracker-react-app/precache-manifest.befe706d6fe0f50676fc324d8fce2451.js"
+  "/tft-tracker-react-app/precache-manifest.60e5d39a22b9fd3751d97a2deb683069.js"
 );
 
 self.addEventListener('message', (event) => {
